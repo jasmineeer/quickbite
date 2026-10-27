@@ -1,0 +1,16 @@
+server:
+  port: ${PORT:8080}
+
+spring:
+  datasource:
+    url: jdbc:h2:mem:quickbite;DB_CLOSE_DELAY=-1
+    username: sa
+    password:
+  jpa:
+    hibernate:
+      ddl-auto: create
+    open-in-view: false
+
+quickbite:
+  payment:
+    base-url: ${PAYMENT_BASE_URL:https://api.midtrans.com}
